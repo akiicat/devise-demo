@@ -12,9 +12,10 @@ class User < ApplicationRecord
             :presence => true,
             :uniqueness => {
               :case_sensitive => false
+            },
+            :format => {
+              with: /\A[a-zA-Z0-9_\-]+\z/
             }
-
-  validates_format_of :name, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
@@ -24,6 +25,4 @@ class User < ApplicationRecord
       where(conditions.to_h).first
     end
   end
-
-
 end
