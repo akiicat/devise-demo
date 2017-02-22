@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20170222180614) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "user_id_id"
-    t.index ["user_id_id"], name: "index_books_on_user_id_id"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_books_on_user_id"
   end
 
   create_table "directions", force: :cascade do |t|
