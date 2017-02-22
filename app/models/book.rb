@@ -1,4 +1,6 @@
 class Book < ApplicationRecord
+  belongs_to :user
+  
   # cocoon
   has_many :directions, inverse_of: :book
   accepts_nested_attributes_for :directions, reject_if: :all_blank, allow_destroy: true
