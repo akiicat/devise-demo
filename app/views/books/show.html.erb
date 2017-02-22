@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<%= @book.image.url %>
+<%= image_tag @book.image.url %>
+<%= image_tag @book.image.url(:medium) %>
+<%= image_tag @book.image.url(:thumb) %>
+
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
