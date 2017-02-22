@@ -16,6 +16,13 @@
     <%= f.text_field :title %>
   </div>
 
+  <%= f.fields_for :directions do |direction| %>
+    <%= render 'direction_fields', f: direction %>
+  <% end %>
+  <div class="links">
+    <%= link_to_add_association 'Add Direction', f, :directions, class: "btn btn-default add-button" %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
