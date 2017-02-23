@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
 
   has_many :books
@@ -24,5 +24,11 @@ class User < ApplicationRecord
     elsif conditions.has_key?(:name) || conditions.has_key?(:email)
       where(conditions.to_h).first
     end
+  end
+
+  protected
+
+  def confirmation_required?
+    false
   end
 end

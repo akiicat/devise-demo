@@ -15,3 +15,9 @@
 //= require cocoon
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $("#resend-link").click(function(e){
+    $("#resend-wrapper form").submit();
+  })
+})
