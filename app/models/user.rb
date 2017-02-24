@@ -16,7 +16,7 @@ class User < ApplicationRecord
               :case_sensitive => false
             },
             :format => {
-              with: /\A[a-zA-Z0-9_\-]+\z/
+              with: /\A[^@#$%&*\\\/]+\z/
             }
 
   def self.find_for_database_authentication(warden_conditions)
