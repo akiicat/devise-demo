@@ -1,4 +1,4 @@
-# Demo Devise with others modules:
+# Demo - Devise with others modules:
 
 - [confirmable][1]: sends emails with confirmation and verifies an account
 - [omniauthable][2]: login from facebook and github with [multiple][3] models
