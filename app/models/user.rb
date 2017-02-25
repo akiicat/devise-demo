@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable,
          :validatable, :omniauthable,
-         :authentication_keys => [:login], :omniauth_providers => [:facebook]
+         :authentication_keys => [:login], :omniauth_providers => [:facebook, :github]
 
   has_many :books
 

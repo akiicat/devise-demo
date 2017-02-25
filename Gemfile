@@ -35,6 +35,7 @@ gem 'cocoon'
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'omniauth-github'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
